@@ -1,7 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Code:400,700|Sacramento&display=swap');
 $body-color: pink;
+$fontColor: #fff;
+$textColor: #333;
+$logoKitchenFont: 'Sacramento';
+$logoCodingFont: 'courier';
+
+
 
 body {
-    color: $body-color;
-    font-family: sans-serif;
+    color: $textColor;
+    background-color: $body-color;
+    font-family: $logoCodingFont;
 
+}
+#Kitchen {
+    font-family: $logoKitchenFont;
+    font-size: 2em;
+    color: $fontColor
+}
+#Coding {
+    font-family: $logoCodingFont;
+    font-size: 2em;
+    color: $fontColor
 }
