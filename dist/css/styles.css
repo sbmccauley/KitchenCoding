@@ -1,19 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Fira+Code:400,700|Sacramento&display=swap");
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box; }
 
 body {
   color: #472a2f;
   background-color: #ffd5d1;
-  font-family: "Fira Code";
-  background-image: url(images/brownie.jpg);
-  background-repeat: no-repeat;
-  background-size: cover; }
+  font-family: "Fira Code"; }
 
 .wrapper {
-  margin: 0 auto; }
+  margin: 0 auto;
+  width: 80%; }
 
 img {
   width: 100%;
@@ -21,6 +17,9 @@ img {
   height: auto; }
 
 header {
+  text-align: center; }
+
+main {
   text-align: center; }
 
 #Kitchen {
@@ -403,7 +402,8 @@ nav input[type=checkbox]:checked ~ ul.menu {
     /* new*/
     align-items: center; }
   #navLogo {
-    margin-right: auto; }
+    font-size: 2em;
+    font-style: bold; }
   nav ul li {
     margin: 1px 5px 5px 1px; }
   .fa-hamburger {
