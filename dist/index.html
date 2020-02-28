@@ -4,17 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kitchen Coding</title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <h1><span id="Kitchen">Kitchen</span> <span id="Coding">Coding</span></h1>
+    <div class="wrapper">
+    <header>
+        <nav class="navBar">
+            <label for="showMenu" class="showMenu">
+                <span class="fas fa-hamburger"></span>
+            </label>
+            <input type="checkbox" id="showMenu" role="button">
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+              
+                <li class="subFlyout">
+                    <a href="#">Recipes</a>
+                    <ul class="submenu">
+                        <li><a href="#">Appetizers</a></li>
+                        <li><a href="#">Main Courses</a></li>
+                        <li><a href="#">Desserts</a></li>
+                        <li><a href="#">Beverages</a></li>
+                    </ul>
+                </li>
 
+                <li><a href="#">Videos</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="">Subscribe</a></li>
+            </ul>
+        </nav>
+    <h1><span id="Kitchen">Kitchen</span> <span id="Coding">Coding</span></h1>
+</header>      
     <main>
         <h1>The Brownie</h1>
         <img src="images/brownie.jpg" alt="brownie">
         <p>Today is a celebration day in our household.  The tiniest member of the kitchen staff got a 94 on this math test yesterday, and that is a celebration worthy feat!  He's not a fan of mathematics, he's more of a reader, and dreamer, and Star Wars Jedi-in-Training.  He's been working hard on his math and today he saw the fruits of that labor.  A 94!!  The reward for this is his dessert of choice, a brownie.  He's not really picky about it, really, any brownie will do, but because of his hard work, he deserves what I call <span>The Definitive Brownie</span>.  This brownie recipe produces, in my opinion, the perfect brownie.  It has the perfect crispy edges, the crackly top, chewy on the indide, bold chocolate flavor, not too sweet, perfect on its own, but stands proudly underneath a scoop of ice cream.....  </p>
     </main>
 
-
+    
+    </div>
 </body>
 </html>

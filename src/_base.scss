@@ -1,0 +1,45 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    
+    color: $textColor;
+    background-color: $body-color;
+    font-family: $logoCodingFont;
+    background-image: url(images/brownie.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.wrapper {
+    margin: 0 auto;
+
+       
+}
+img {
+    width: 100%;
+    max-width: 960px;
+    height: auto;
+}
+header {
+    text-align: center;
+}
+
+
+
+#Kitchen {
+    font-family: $logoKitchenFont;
+    font-size: 2em;
+    color: $fontColor
+}
+#Coding {
+    font-family: 'courier', sans-serif;
+    font-size: 2em;
+    color: $fontColor
+}
+
