@@ -154,6 +154,7 @@ nav input[type=checkbox]:checked ~ ul.menu {
   .navBar ul {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     list-style-type: none;
     justify-content: space-around;
     /* new*/
@@ -177,6 +178,7 @@ nav input[type=checkbox]:checked ~ ul.menu {
     /** USE OF pseudo SELECTOR **/
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
     z-index: 3;
     background-color: #472a2f;
     color: #ffd5d1; } }
