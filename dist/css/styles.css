@@ -22,40 +22,11 @@ main h1, main h4 {
   text-align: center; }
 
 .Kitchen {
-  font-family: "Sacramento";
-  color: #472a2f; }
+  font-family: "Sacramento"; }
 
 .Coding {
-  font-family: 'courier', sans-serif;
-  color: #472a2f; }
+  font-family: 'courier', sans-serif; }
 
-/*.recipe {
-    display: flex;
-    
-    ul, ol  {
-        flex-direction: column;
-    }
-}
-.recipePage {
-    ul {
-        display: flex;
-        flex-wrap: wrap;
-        padding: 5px;
-        justify-content: space-evenly;
-        list-style-type: none;
-        display: inline-grid;
-        grid-gap: 5px;
-        grid-template-columns: 33.3% 33.3% 33.4% ;
-        grid-template-rows: 2fr;
-        justify-items: center;
-        list-style-type: none;
-        align-items: center;
-        
-       
-
-    }
-    
-*/
 section {
   display: flex;
   flex-direction: column;
@@ -73,7 +44,6 @@ section article img {
 
 section article h2 {
   font-family: "Fira Code";
-  border-bottom: solid 1px #472a2f;
   color: #472a2f; }
 
 article p {
@@ -114,6 +84,9 @@ article p {
     color: #472a2f;
     text-decoration: none;
     font-size: 1em; }
+    .navBar ul a:hover {
+      background-color: #472a2f;
+      color: #ffd5d1; }
 
 /* MOBILE NAVIGATION*/
 /* the checkbox hack */
@@ -174,6 +147,9 @@ nav input[type=checkbox]:checked ~ ul.menu {
   .menu li .submenu li a {
     color: #fff;
     font-size: .75em; }
+    .menu li .submenu li a:hover {
+      color: #472a2f;
+      background-color: #ffd5d1; }
   .menu li:hover ul {
     /** USE OF pseudo SELECTOR **/
     display: flex;
@@ -184,3 +160,13 @@ nav input[type=checkbox]:checked ~ ul.menu {
     color: #ffd5d1; } }
 
 /* End Nav Bar Large */
+.recipe > section {
+  display: flex; }
+  .recipe > section .ingredients {
+    flex-basis: 50%; }
+    .recipe > section .ingredients li {
+      list-style-type: none; }
+      .recipe > section .ingredients li:nth-child(odd) {
+        background-color: rgba(71, 42, 47, 0.2); }
+  .recipe > section .method {
+    flex-basis: 50%; }

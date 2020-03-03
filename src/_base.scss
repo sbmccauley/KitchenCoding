@@ -38,39 +38,12 @@ main  {
 
 .Kitchen {
     font-family: $logoKitchenFont;
-       color: $fontColor
+      
 }
 .Coding {
     font-family: 'courier', sans-serif;
-        color: $fontColor
-}
-/*.recipe {
-    display: flex;
-    
-    ul, ol  {
-        flex-direction: column;
-    }
-}
-.recipePage {
-    ul {
-        display: flex;
-        flex-wrap: wrap;
-        padding: 5px;
-        justify-content: space-evenly;
-        list-style-type: none;
-        display: inline-grid;
-        grid-gap: 5px;
-        grid-template-columns: 33.3% 33.3% 33.4% ;
-        grid-template-rows: 2fr;
-        justify-items: center;
-        list-style-type: none;
-        align-items: center;
         
-       
-
-    }
-    
-*/   
+}
     
 
 section {
@@ -91,7 +64,7 @@ section article img {
 section article h2 {
    
     font-family: $logoCodingFont;
-    border-bottom: solid 1px $fontColor;
+    
     color: $fontColor;
 }
 article p {

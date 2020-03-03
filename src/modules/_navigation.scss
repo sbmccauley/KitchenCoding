@@ -12,6 +12,10 @@
         color: $textColor;
         text-decoration: none;
         font-size: 1em;
+        &:hover {
+            background-color: $textColor;
+            color: $body-color;
+        } 
     }
 
 
@@ -116,6 +120,10 @@ nav input[type=checkbox]:checked ~ ul.menu {
     .menu li .submenu li a {
         color: #fff;
         font-size: .75em;
+        &:hover {
+            color: $textColor;
+            background-color: $body-color;
+        }
     }
 
 
@@ -125,8 +133,9 @@ nav input[type=checkbox]:checked ~ ul.menu {
         flex-direction: row;
         flex-wrap: nowrap; 
         z-index: 3;
-        background-color:$textColor;
+        background-color: $textColor;
         color: $body-color;
+        
        
 
     }
