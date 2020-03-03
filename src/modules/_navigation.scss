@@ -1,36 +1,38 @@
 /* Navigation Start */
-.navBar ul {
-    /** USE OF class SELECTOR**/
+.navBar ul { //NESTING
     display: none;
     list-style-type: none;
+     li {
+        text-align: center;
+    
+    }
+    a {
+        padding: .6em;
+        display: block;
+        color: $textColor;
+        text-decoration: none;
+        font-size: 1em;
+        &:hover {
+            background-color: $textColor;
+            color: $body-color;
+        } 
+    }
+
 
 
 }
 
-nav li {
-    text-align: center;
 
-}
-
-nav a {
-    padding: .6em;
-    display: block;
-    color: $textColor;
-    text-decoration: none;
-    font-size: 1em;
-}
 
 /* MOBILE NAVIGATION*/
 /* the checkbox hack */
-/* build out footer with '+' icon over the holiday*/
 nav input[type=checkbox] {
-    /** USE OF [attribute=value] SELECTOR**/
+    
     display: none;
 }
 
 nav input[type=checkbox]:checked ~ ul.menu {
-    /** USE OF general sibling combinator SELECTOR **/
-    /*  ~ general sibling combinator, in this instance it is looking for ul.menu (i.e. ul.menu is sibling of input) with input box checked*/
+    
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -46,7 +48,7 @@ nav input[type=checkbox]:checked ~ ul.menu {
 }
 
 .fa-hamburger {
-    /* icon fonts are easy to use, lightweight, scalable*/
+   
     margin-left: .25em;
     font-size: 2em;
     float: right;
@@ -79,7 +81,7 @@ nav input[type=checkbox]:checked ~ ul.menu {
     .navBar ul {
         display: flex;
         flex-direction: row;
-
+        flex-wrap: wrap;
         list-style-type: none;
         justify-content: space-around;
         /* new*/
@@ -118,6 +120,10 @@ nav input[type=checkbox]:checked ~ ul.menu {
     .menu li .submenu li a {
         color: #fff;
         font-size: .75em;
+        &:hover {
+            color: $textColor;
+            background-color: $body-color;
+        }
     }
 
 
@@ -125,9 +131,12 @@ nav input[type=checkbox]:checked ~ ul.menu {
         /** USE OF pseudo SELECTOR **/
         display: flex;
         flex-direction: row;
+        flex-wrap: nowrap; 
         z-index: 3;
-        background-color:$textColor;
+        background-color: $textColor;
         color: $body-color;
+        
+       
 
     }
 }

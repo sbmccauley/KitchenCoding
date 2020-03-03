@@ -1,0 +1,23 @@
+.recipe > section {
+    display: flex;
+    .ingredients {
+        flex-basis: 50%;
+        li {
+        list-style-type: none;
+        &:nth-child(odd) {
+            background-color: transparentize($color: $textColor, $amount: .80);
+        }
+    }
+    }
+    .method {
+        flex-basis: 50%;
+
+    }
+   
+
+
+
+
+}
+
+
