@@ -1,0 +1,46 @@
+$color-btn-text: #eee8d6;
+$color-btn-coffee: $textColor;
+$color-btn-tea: #69bf64;
+$color-btn-cocktail: salmon;
+
+
+
+%btn {
+    display: inline-block;
+    padding: 6px 12px;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    font-family: $logoCodingFont;
+    user-select: none;
+    color: #fff;
+}
+
+.btn-coffee {
+    @extend %btn;
+    background: $color-btn-coffee;
+}
+.btn-tea {
+    @extend %btn;
+    background: $color-btn-tea;
+}
+.btn-cocktail {
+    @extend %btn;
+    background: $color-btn-cocktail;
+}
+
+$color-btns: (
+    cake: salmon,
+    steak: $textColor,
+    salad: #69bf64
+);
+
+@each $name, $value in $color-btns {
+    .btn-#{$name} {
+        @extend %btn;
+        background-color: $value;
+    }
+}

@@ -1,0 +1,49 @@
+
+
+.recipeLinks {
+    display: flex;
+    flex-direction: column; /*will display items as one big column*/
+   
+   align-items: center;
+   
+}
+.recipeLinks > article {
+    padding: 0 50px;
+    img {
+        // height: 5em;
+        // float: left;
+        margin-right: 10px;
+        border: solid 1px #fff;
+    }
+    h2 {
+         font-family: $logoCodingFont;
+        color: $fontColor;
+    }
+    a {
+        text-decoration: none;
+
+    }
+   
+   
+}
+@media (min-width: $mobileScreen) {
+    .recipeLinks {
+      flex-direction: row;
+      flex-flow: row wrap;
+      flex-wrap: wrap;
+      
+      justify-content: center;
+    //   margin: auto;
+    //   height: auto;
+      article {
+        flex-basis: 33.3%;
+        padding: 15px; }
+        
+    } 
+}
+@media(min-width: $midScreen) {
+    .recipeLinks > article {
+        flex-basis: 50%;
+        
+    }
+}
