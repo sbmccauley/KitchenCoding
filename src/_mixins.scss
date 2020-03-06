@@ -6,3 +6,28 @@
     height: $height;
     padding-top: 250px;
 }
+
+@mixin break($args...) { // USE OF IF ELSE
+    @if length($args) == 1 {
+        @media (min-width: nth($args, 1)) {
+        @content;
+        }
+    }
+    @if length($args) == 2 {
+        @media  (min-width: nth($args, 1)) and 
+                (max-width: nth($args, 2)) {
+            @content;
+        }
+    }
+}
+
+//MATH OPERATIONS
+@mixin rowMachine($numPerRow, $margin) {
+    width: (100% - (($numPerRow - 1) * $margin) / $numPerRow);
+    &:nth-child(n) {
+        margin-right: $margin;
+    }   
+    &:nth-child(#{$numPerRow}n) {
+        margin-right: 0;
+    }
+}

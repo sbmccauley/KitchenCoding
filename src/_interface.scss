@@ -20,7 +20,7 @@ $color-btn-cocktail: salmon;
 }
 
 .btn-coffee {
-    @extend %btn;
+    @extend %btn;  // USE OF EXTEND
     background: $color-btn-coffee;
 }
 .btn-tea {
@@ -32,15 +32,35 @@ $color-btn-cocktail: salmon;
     background: $color-btn-cocktail;
 }
 
-$color-btns: (
+$color-btns: (  //MAP
     cake: salmon,
     steak: $textColor,
-    salad: #69bf64
+    salad: #69bf64,
+    picnic: #69bf64,
+    party:  salmon,
+    pajamas:$textColor
+
 );
 
-@each $name, $value in $color-btns {
+
+@each $name, $value in $color-btns { //FLOW CONTROL AND LIST PROPERTIES
     .btn-#{$name} {
         @extend %btn;
         background-color: $value;
     }
+}
+
+
+.buttonWrapper {
+    @include rowMachine(3, 15%);
+    background-color: complement($body-color); //USE OF BUILT-IN
+    padding: 10px;
+    float: left;
+    margin: 10px;
+    width: 450px;
+    .buttons {
+        padding: 20px;
+       
+    }
+    text-align: center;
 }

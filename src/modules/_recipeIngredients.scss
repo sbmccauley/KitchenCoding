@@ -1,19 +1,46 @@
 .recipe > section {
     display: flex;
-    .ingredients {
+    @include break(0, 599px) {
+      display: block;
+    }
+    .ingredients  {
         flex-basis: 50%;
         li {
         list-style-type: none;
-        &:nth-child(odd) {
-            background-color: transparentize($color: $textColor, $amount: .80);
+        &:nth-child(odd) { // COLOR MODIFIER
+            background-color: transparentize($color: $textColor, $amount: .80); 
         }
     }
     }
     .method {
-        flex-basis: 50%;
-
+      flex-basis: 50%;
     }
-
+}
+.aboutPage {
+    display: flex;
+    flex-direction: column; 
+ 
+  article {
+   
+    p span {
+        font-weight: bold;
+        font-style: italic;
+    }
+  }
+  @include break(600px) {
+    flex-direction: row;
+      flex-flow: row wrap;
+      flex-wrap: wrap;
+      
+      justify-content: center; 
+      article {
+         @include break(600px) {
+        flex-basis: 33.3%;
+        padding: 15px; 
+        }
+       
+      }  
+  }
 }
 
 
