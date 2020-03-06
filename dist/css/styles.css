@@ -451,14 +451,14 @@ template {
 
 #navLogo {
   font-size: 2em;
-  font-style: bold; }
+  font-weight: bold; }
   @media (min-width: 600px) and (max-width: 996px) {
     #navLogo {
       display: none; } }
 
 #navLogo2 {
   font-size: 2em;
-  font-style: bold; }
+  font-weight: bold; }
   @media (min-width: 996px) {
     #navLogo2 {
       display: none; } }

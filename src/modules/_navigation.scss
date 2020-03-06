@@ -34,7 +34,7 @@
         display: none;
     }
     font-size: 2em;
-    font-style: bold;
+    font-weight: bold;
 }
 #navLogo2 {
     @include break(996px) {
@@ -44,7 +44,7 @@
         display: none;
     }
     font-size: 2em;
-    font-style: bold;
+    font-weight: bold;
 }
    
 
@@ -119,7 +119,7 @@ nav input[type=checkbox]:checked ~ ul.menu {
                 @include break(996px) {
                     display: flex;
                     flex-direction: row;
-                   // flex-wrap: nowrap; 
+                   
                     z-index: 3;
                     background-color: lighten($textColor, 5%); //USE OF BUILT IN
                     color: $body-color;  
