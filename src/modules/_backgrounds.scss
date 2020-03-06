@@ -1,0 +1,17 @@
+.jumbotron {
+    @include break(600px) {
+        @include backImage('../images/brownie760.png');
+    }
+    @include backImage ('../images/brownieSmallScreen.png');
+   
+    h1 {
+        text-align: center;
+        align-items: center;
+        color: #fff;
+        font-size: 5em;
+    }
+    margin-top: 3em;
+
+    
+    
+}

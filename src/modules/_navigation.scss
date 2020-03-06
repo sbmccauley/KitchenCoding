@@ -1,10 +1,9 @@
-/* Navigation Start */
+
 .navBar ul { //NESTING
     display: none;
     list-style-type: none;
      li {
-        text-align: center;
-    
+        text-align: center;   
     }
     a {
         padding: .6em;
@@ -17,12 +16,37 @@
             color: $body-color;
         } 
     }
+    @include break(600px) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        list-style-type: none;
+        justify-content: space-around;
+        align-items: center;
+    }
 
 
 
 }
 
-
+#navLogo {
+    @include break(600px, 996px) {
+        display: none;
+    }
+    font-size: 2em;
+    font-weight: bold;
+}
+#navLogo2 {
+    @include break(996px) {
+        display: none;
+    }
+    @include break(0, 599px) {
+        display: none;
+    }
+    font-size: 2em;
+    font-weight: bold;
+}
+   
 
 /* MOBILE NAVIGATION*/
 /* the checkbox hack */
@@ -36,6 +60,10 @@ nav input[type=checkbox]:checked ~ ul.menu {
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include break(600px) {
+        display: flex;
+        flex-direction: row;
+    }
 }
 
 .showMenu {
@@ -53,59 +81,18 @@ nav input[type=checkbox]:checked ~ ul.menu {
     font-size: 2em;
     float: right;
     color: $textColor;
+    @include break(600px) {
+        display: none;
+    }
 }
-
-
-/*END CHECKBOX HACK*/
-
-/* LARGE SCREEN DISPLAY */
-@media screen and (min-width: 600px) {
-
-    .wrapper {
-        /*        width: 100%;*/
-        
-    }
-
-
-    /* Nav bar large */
-    nav input[type=checkbox]:checked ~ ul.menu {
-        /*  ~ general sibling combinator, in this instance it is looking for ul.menu (i.e. ul.menu is sibling of input) with input box checked*/
-        display: flex;
-        flex-direction: row;
-    }
 
     nav li {
         border: none;
     }
-
-    .navBar ul {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        list-style-type: none;
-        justify-content: space-around;
-        /* new*/
-        align-items: center;
-    }
-
-    #navLogo {
-       
-        font-size: 2em;
-        font-style: bold;
-       
-    }
-
     nav ul li {
         margin: 1px 5px 5px 1px;
     }
-
-    .fa-hamburger {
-        display: none;
-    }
-
-
-
-
+    
     .navBar .menu li {
 
         position: relative;
@@ -113,31 +100,32 @@ nav input[type=checkbox]:checked ~ ul.menu {
 
     .menu li .submenu {
         position: absolute;
+        @include break(600px) {
         display: none;
+        }
 
-    }
-
-    .menu li .submenu li a {
-        color: #fff;
+        a {
+            color: #fff;
         font-size: .75em;
         &:hover {
             color: $textColor;
             background-color: $body-color;
         }
+        }
     }
-
-
-    .menu li:hover ul {
-        /** USE OF pseudo SELECTOR **/
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap; 
-        z-index: 3;
-        background-color: $textColor;
-        color: $body-color;
-        
-       
-
+    .menu li {
+        &:hover {
+            ul {
+                @include break(996px) {
+                    display: flex;
+                    flex-direction: row;
+                   
+                    z-index: 3;
+                    background-color: lighten($textColor, 5%); //USE OF BUILT IN
+                    color: $body-color;  
+                    }
+            }
+        }
     }
-}
-    /* End Nav Bar Large */
+    
+
